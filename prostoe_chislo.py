@@ -9,10 +9,10 @@ def prime(number=int(input("Введите натуральное число б�
     delitel = 3
     while delitel * delitel <= number and number % delitel != 0:
         delitel += 1
-    if delitel > number:
-        print("Составное число")
-    else:
+    if delitel * delitel > number:
         print("Простое число")
+    else:
+        print("Составное число")
 
 
 prime()
