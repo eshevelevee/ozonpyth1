@@ -3,13 +3,13 @@
 # Функция должна возвращать строку «Простое число» в случае, если оно простое, и строку «Составное число» в противном случае.
 
 def prime(number=int(input("Введите натуральное число больше 1: "))):
-    if number % 2 == 0:
+    if number % 2 == 0: # если число делится на 2 то оно составное
         print("Составное число")
-        return 1
+        return 1 # выходим из функции
     delitel = 3
-    while delitel * delitel <= number and number % delitel != 0:
+    while delitel * delitel <= number and number % delitel != 0: # ищем делитель причем у составного числа есть делитель который меньше либо равен квадратному корню из него
         delitel += 1
-    if delitel * delitel > number:
+    if delitel * delitel > number: # если мы не нашли делитель меньший корня квадратного из числа значит число простое
         print("Простое число")
     else:
         print("Составное число")
